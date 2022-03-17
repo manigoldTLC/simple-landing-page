@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,8 +8,115 @@
     <title>Simple Page</title>
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
 </head>
-<body>
 
+<body>
+    <header class="header">
+        <figure class="header__logo">
+            <img class="header__img" src="assets/img/logo.png" alt="logo">
+        </figure>
+
+        <nav class="header__menu menu">
+            <ul class="menu__list">
+                <li class="menu__links">
+                    <a class="menu__link" href="index.html">Changelog</a>
+                </li>
+                <li class="menu__links">
+                    <a class="menu__link" href="index.html">Buy now</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="main">
+
+        <section class="main__texts">
+            <h1 class="main__title">Simple and modern Design System</h1>
+            <h2 class="main__subtitle">Disy is a minimalist Design System/UI Kit of well-organized and customizable
+                elements for Sass web and desktop apps.</h2>
+            <div class="buttons">
+                <button class="buttom__primary">Get started for 22$</button>
+                <button class="buttom__secondary">Live preview</button>
+            </div>
+        </section>
+
+        <section class="main__smallcards">
+            <div class="main__smallcard">
+                <figure class="main__icon">
+                    <img class="main_imgSmallcard" src="#" alt="image card">
+                </figure>
+
+                <span class="card__title">
+                    400+ Components
+                </span>
+                <span class="card__subtitle">
+                    The numerous components and variants will allow you to build interfaces of any complexity.
+                </span>
+            </div>
+
+            <div class="main__smallcard">
+                <figure class="main__icon">
+                    <img class="main_imgSmallcard" src="#" alt="image card">
+                </figure>
+
+                <span class="card__title">Layout samples</span>
+                <span class="card__subtitle">
+                    Get inspiration and kickstart your project with ready-to-use layout samples.
+                </span>
+            </div>
+
+            <div class="main__smallcard">
+                <figure class="main__icon">
+                    <img class="main_imgSmallcard" src="#" alt="image card">
+                </figure>
+
+                <span class="card__title">Lifetime acess</span>
+                <span class="card__subtitle">
+                    Get lifetime acess to the Design System and upcoming updates for a simple one-time-price.
+                </span>
+            </div>
+
+        </section>
+
+        <section class="main__bigcards">
+            <div class="main__bigcard">
+                <span class="bigcard__title">Less clutter, more flexibility</span>
+                <span class="bigcard__subtitle">Spend more time building your product, rather than focusing on the
+                    interface itself</span>
+                <figure>
+                    <img class="main__imgBigcard" src="#" alt="image bigcard">
+                </figure>
+            </div>
+
+            <div class="main__bigcard">
+                <span class="bigcard__title">Handcrafted components</span>
+                <span class="bigcard__subtitle">Customize your design tokens and see changes across your Design
+                    System</span>
+                <figure>
+                    <img class="main__imgBigcard" src="#" alt="image bigcard">
+                </figure>
+            </div>
+
+            <div class="main__bigcard">
+                <span class="bigcard__title">Powerful system</span>
+                <span class="bigcard__subtitle">Drag and drop pre-made components and take advantage of Figma's</span>
+                <figure>
+                    <img class="main__imgBigcard" src="#" alt="image bigcard">
+                </figure>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <p class="footer__p">&copy; Gabriel Xavier Cardoso</p>
+        <form>
+            <label class="footer__label" for="inputnumber">Entre em contato</label>
+            <input class="footer__input" type="tel" id="inputnumber" placeholder="Insira seu telefone">
+            <button class="footer__button">Enviar</button>
+        </form>
+    </footer>
 </body>
+
 </html>
