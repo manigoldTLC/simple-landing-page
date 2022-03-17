@@ -1,0 +1,32 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-family: "Inter", sans-serif;
+  margin: 0 5rem;
+  padding: 1rem;
+}
+.header__img {
+  max-width: 2.5em;
+}
+.header .menu__list {
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+}
+.header .menu__links:last-child {
+  border: 1px solid black;
+  padding: 1.5em 2.5em;
+  border-radius: 50px;
+  background-color: white;
+}
+.header .menu__link {
+  text-decoration: none;
+  font-weight: bold;
+  color: black;
+}
+.header .menu__link:hover {
+  color: rgba(0, 0, 0, 0.5);
+}
+
+/*# sourceMappingURL=style.css.map */
