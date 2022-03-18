@@ -122,5 +122,46 @@
   line-height: 1.4em;
   color: rgba(128, 128, 128, 0.9);
 }
+.main__bigcards {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+}
+.main__bigcards .twocards {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 2rem;
+}
+.main__bigcards .bigcard {
+  background-color: rgba(128, 128, 128, 0.151);
+  padding: 2em;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+}
+.main__bigcards .bigcard__title {
+  font-weight: bold;
+  font-size: 1.6em;
+  margin-bottom: 1.1em;
+}
+.main__bigcards .bigcard__subtitle {
+  line-height: 1.9em;
+  color: rgba(128, 128, 128, 0.9);
+}
+.main__bigcards .bigcard__image {
+  width: 80%;
+  height: 435px;
+  align-self: center;
+  margin-top: 2em;
+}
+.main__bigcards .bigcard__imgBigcard {
+  border-radius: 20px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
 
 /*# sourceMappingURL=style.css.map */
