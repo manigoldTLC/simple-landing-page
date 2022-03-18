@@ -88,5 +88,39 @@
   border: 1px solid black;
   cursor: pointer;
 }
+.main__smallcards {
+  display: flex;
+  gap: 3rem;
+  margin: 7rem 0 5rem 0;
+  justify-content: center;
+}
+.main__smallcards .smallcard {
+  display: flex;
+  flex-direction: column;
+  max-width: 20%;
+  padding: 1rem;
+  border: 1px solid rgba(128, 128, 128, 0.18);
+  border-radius: 10px;
+}
+.main__smallcards .smallcard__icon {
+  width: 20px;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: rgba(128, 128, 128, 0.26);
+  margin-bottom: 1.5em;
+}
+.main__smallcards .smallcard__imgSmallcard {
+  width: 100%;
+  object-fit: cover;
+}
+.main__smallcards .smallcard__title {
+  font-weight: bold;
+  font-size: 1.2em;
+  margin-bottom: 1em;
+}
+.main__smallcards .smallcard__subtitle {
+  line-height: 1.4em;
+  color: rgba(128, 128, 128, 0.9);
+}
 
 /*# sourceMappingURL=style.css.map */
