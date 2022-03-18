@@ -169,4 +169,19 @@
   object-fit: cover;
 }
 
+.footer {
+  margin-top: 4rem;
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 5rem;
+  height: 70px;
+  background-color: rgba(0, 0, 0, 0.87);
+  font-family: "Inter", sans-serif;
+}
+.footer__p {
+  color: white;
+}
+
 /*# sourceMappingURL=style.css.map */
