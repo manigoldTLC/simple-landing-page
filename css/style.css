@@ -3,7 +3,8 @@
   align-items: center;
   justify-content: space-between;
   font-family: "Inter", sans-serif;
-  margin: 0 5rem;
+  max-width: 80%;
+  margin: 0 auto;
   padding: 1rem;
 }
 .header__img {
@@ -31,7 +32,8 @@
 
 .main {
   font-family: "Inter", sans-serif;
-  margin: 0 5em;
+  max-width: 80%;
+  margin: 0 auto;
 }
 .main__section-texts {
   margin: 8rem 0 3rem 0;
@@ -39,7 +41,7 @@
 }
 .main__texts {
   margin-bottom: 2rem;
-  width: 45%;
+  width: 55%;
 }
 .main__title {
   font-size: 4em;
@@ -88,16 +90,22 @@
   border: 1px solid black;
   cursor: pointer;
 }
+.main__allcards {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+}
 .main__smallcards {
   display: flex;
-  gap: 3rem;
+  justify-content: space-between;
   margin: 7rem 0 5rem 0;
-  justify-content: center;
+  width: 100%;
 }
 .main__smallcards .smallcard {
   display: flex;
   flex-direction: column;
-  max-width: 20%;
+  width: 26%;
   padding: 1rem;
   border: 1px solid rgba(128, 128, 128, 0.18);
   border-radius: 10px;
@@ -124,15 +132,8 @@
 }
 .main__bigcards {
   display: flex;
-  flex-direction: column;
-  gap: 2rem;
-  align-items: center;
-}
-.main__bigcards .twocards {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  gap: 2rem;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 .main__bigcards .bigcard {
   background-color: rgba(128, 128, 128, 0.151);
@@ -140,7 +141,11 @@
   border-radius: 10px;
   display: flex;
   flex-direction: column;
-  width: 30%;
+  width: 40%;
+}
+.main__bigcards .bigcard:last-child {
+  width: 100%;
+  margin-top: 2.5rem;
 }
 .main__bigcards .bigcard__title {
   font-weight: bold;
@@ -153,7 +158,7 @@
 }
 .main__bigcards .bigcard__image {
   width: 80%;
-  height: 435px;
+  height: 450px;
   align-self: center;
   margin-top: 2em;
 }
