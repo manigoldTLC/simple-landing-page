@@ -1,16 +1,14 @@
 .footer {
-    margin-top: 4rem;
     padding: 1rem;
-    display: flex;
-    justify-content: center;
+    @include flexbox(justify-content, center);
     align-items: flex-end;
     gap: 5rem;
     height: 70px;
-    background-color: rgba(0, 0, 0, 0.87);
+    background-color: $raising-black;
     font-family: 'Inter', sans-serif;
 
     &__p {
-        color: white;
+        color: $raising-white;
     }
 
 }

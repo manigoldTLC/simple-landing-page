@@ -1,169 +1,193 @@
+$standard-white: #FFFFFF;
+$raising-white: #FEFEFE;
+$cultured-grey: #F5F5F5;
+$levander-grey: #CBCBD7;
+$sonic-silver: #717171;
+$dark-grey: #3D3C3C;
+$raising-black: #272626;
+$viridian-green: #00A5AE;
+$blue-munsell: #02879F;
+
+
+%default-behavior {
+    text-decoration: none;
+    color: $dark-grey;
+    transition: 400ms;
+}
+
+%hover-behavior {
+    border: 1px solid $dark-grey;
+    cursor: pointer;
+}
+
+
+@mixin mixin-margin($top, $right, $bottom, $left) {
+    margin: $top $right $bottom $left;
+}
+
+@mixin flexbox($flex-property, $flex-value) {
+    display: flex;
+    #{$flex-property}: $flex-value;
+}
+
+
 @import 'header', 'footer';
 
 .main {
     font-family: 'Inter', sans-serif;
     max-width: 80%;
-    margin: 0 auto;
+    @include mixin-margin(8rem, auto, 8rem, auto);
 
-    &__section-texts {
-        margin: 8rem 0 3rem 0;
+    &__top-page {
+        @include mixin-margin(0, 0, 3rem, 0);
         width: 100%;
-    }
 
-    &__texts {
-        margin-bottom: 2rem;
-        width: 55%;
-    }
+        .texts {
+            @include mixin-margin(0, 0, 2rem, 0);
+            width: 55%;
 
-    &__title {
-        font-size: 4em;
-        font-weight: bold;
-        color: black;
-        margin-bottom: 2rem;
-        line-height: 1.2em;
-    }
-
-    &__subtitle {
-        font-size: 1.3em;
-        font-weight: 400;
-        color: rgba(0, 0, 0, 0.8);
-        line-height: 1.5em;
-    }
-
-    .buttons {
-        display: flex;
-        gap: 2em;
-        justify-content: flex-start;
-
-        &__primary {
-            color: white;
-            background-color: blue;
-            border-radius: 50px;
-            padding: 1em 2em;
-            border: 1px solid blue;
-            font-size: 16px;
-            font-weight: bold;
-            transition: 400ms;
-
-            &:hover {
-                background-color: darkblue;
-                color: antiquewhite;
-                cursor: pointer;
+            &__title {
+                font-size: 4em;
+                font-weight: bold;
+                color: $raising-black;
+                @include mixin-margin(0, 0, 2rem, 0);
+                line-height: 1.2em;
+            }
+        
+            &__subtitle {
+                font-size: 1.3em;
+                font-weight: 400;
+                color: $dark-grey;
+                line-height: 1.5em;
             }
         }
 
-        &__secondary {
-            color: black;
-            border: 1px solid grey;
-            border-radius: 50px;
-            background-color: white;
-            font-size: 16px;
-            font-weight: bold;
-            padding: 1em 2em;
-            transition: 400ms;
-
-            &:hover {
-                border: 1px solid black;
-                cursor: pointer;
+        .buttons {
+            @include flexbox(justify-content, flex-start);
+            gap: 1.5em;
+    
+            &__primary {
+                color: $raising-white;
+                background-color: $viridian-green;
+                border-radius: 50px;
+                padding: 1em 2em;
+                border: none;
+                font-size: 16px;
+                font-weight: bold;
+                transition: 400ms;
+    
+                &:hover {
+                    background-color: $blue-munsell;
+                    color: $cultured-grey;
+                    cursor: pointer;
+                }
+            }
+    
+            &__secondary {
+                color: $dark-grey;
+                border: 1px solid $levander-grey;
+                border-radius: 50px;
+                background-color: $standard-white;
+                font-size: 16px;
+                font-weight: bold;
+                padding: 1em 2em;
+                transition: 400ms;
+    
+                &:hover {
+                    @extend %hover-behavior;
+                }
             }
         }
     }
 
     &__allcards {
         width: 60%;
-        display: flex;
-        flex-direction: column;
-        margin: 0 auto;
-    }
+        @include flexbox(flex-direction, column);
+        @include mixin-margin(0, auto, 0, auto);
 
-    &__smallcards {
-        display: flex;
-        justify-content: space-between;
-        margin: 7rem 0 5rem 0;
-        width: 100%;
-
-        .smallcard {
-            display: flex;
-            flex-direction: column;
-            width: 26%;
-            padding: 1rem;
-            border: 1px solid rgba(128, 128, 128, 0.18);
-            border-radius: 10px;
-            
-            &__icon {
-                width: 20px;
-                padding: 10px;
+        .smallcards {
+            width: 100%;
+            @include flexbox(justify-content, space-between);
+            @include mixin-margin(7rem, 0, 5rem, 0);
+    
+            .smallcard {
+                @include flexbox(flex-direction, column);
+                width: 26%;
+                padding: 1rem;
+                border: 1px solid $levander-grey;
                 border-radius: 10px;
-                background-color: rgba(128, 128, 128, 0.26);
-                margin-bottom: 1.5em;
-            }
-    
-            &__imgSmallcard {
-                width: 100%;
-                object-fit: cover;
-            }
-
-            &__title {
-                font-weight: bold;
-                font-size: 1.2em;
-                margin-bottom: 1em;
-            }
-
-            &__subtitle {
-                line-height: 1.4em;
-                color: rgba(128, 128, 128, 0.9);
-            }
-        }
-
-    }
-
-    &__bigcards {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
+                
+                &__icon {
+                    width: 20px;
+                    padding: 12px;
+                    border-radius: 10px;
+                    background-color: $cultured-grey;
+                    @include mixin-margin(0, 0, 1.5em, 0);
+                }
         
-        .bigcard {
-            background-color: rgba(128, 128, 128, 0.151);
-            padding: 2em;
-            border-radius: 10px;
-            display: flex;
-            flex-direction: column;
-            width: 40%;
-
-            &:last-child {
-                width: 100%;
-                margin-top: 2.5rem;
+                &__imgSmallcard {
+                    width: 100%;
+                    object-fit: cover;
+                }
+    
+                &__title {
+                    font-weight: bold;
+                    font-size: 1.2em;
+                    @include mixin-margin(0, 0, 1em, 0);
+                    color: $raising-black;
+                }
+    
+                &__subtitle {
+                    line-height: 1.4em;
+                    color: $sonic-silver;
+                }
             }
-
-            &__title {
-                font-weight: bold;
-                font-size: 1.6em;
-                margin-bottom: 1.1em;
-            }
-
-            &__subtitle {
-                line-height: 1.9em;
-                color: rgba(128, 128, 128, 0.9);
-            }
-
-            &__image {
-                width: 80%;
-                height: 450px;
-                align-self: center;
-                margin-top: 2em;
-            }
-            
-            &__imgBigcard {
-                border-radius: 20px;
-                width: 100%;
-                height: 100%;
-                object-fit: cover;
-
-            }
-            
         }
 
-    }
-
+        .bigcards {
+            @include flexbox(justify-content, space-between);
+            flex-wrap: wrap;
+            
+            .bigcard {
+                background-color: $cultured-grey;
+                padding: 2em;
+                border-radius: 10px;
+                @include flexbox(flex-direction, column);
+                width: 40%;
     
+                &:last-child {
+                    width: 100%;
+                    margin-top: 2.5rem;
+                    @include mixin-margin(2.5rem, 0, 0, 0);
+                }
+    
+                &__title {
+                    font-weight: bold;
+                    font-size: 1.6em;
+                    @include mixin-margin(0, 0, 1.1em, 0);
+                    color: $raising-black;
+                }
+    
+                &__subtitle {
+                    line-height: 1.9em;
+                    color: $sonic-silver;
+                }
+    
+                &__image {
+                    width: 80%;
+                    height: 450px;
+                    align-self: center;
+                    margin-top: 2em;
+                    @include mixin-margin(2em, 0, 0, 0);
+                }
+                
+                &__imgBigcard {
+                    border-radius: 20px;
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+        }
+    }
 }

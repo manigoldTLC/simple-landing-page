@@ -1,44 +1,43 @@
 .header {
-    display: flex;
+    @include flexbox(justify-content, space-between);
     align-items: center;
-    justify-content: space-between;
     font-family: 'Inter', sans-serif;
     max-width: 80%;
-    margin: 0 auto;
+    @include mixin-margin(0, auto, 0, auto);
     padding: 1rem;
 
-    &__img {
+    &__logo {
         max-width: 2.5em;
+    }
+
+    &__img {
+        width: 100%;
     }
 
     .menu {
         &__list {
-            display: flex;
-            align-items: center;
-            gap: 4rem;
+            @include flexbox(align-items, center);
+            gap: 2.5rem;
         }
 
         &__links {
-            &:last-child {
-                border: 1px solid black;
-                padding: 1.5em 2.5em;
-                border-radius: 50px;
-                background-color: white;
-                
-            }
 
+            &:last-child {
+                border: 1px solid $levander-grey;
+                padding: 1.2em 2.3em;
+                border-radius: 50px;
+                background-color: $standard-white;
+                @extend %default-behavior;
+
+                &:hover {
+                    @extend %hover-behavior;
+                }
+            }
         }
 
         &__link {
-            text-decoration: none;
+            @extend %default-behavior;
             font-weight: bold;
-            color: black;
-
-            &:hover {
-                color: rgba(0, 0, 0, 0.5);
-            }
         }
-
-
     }
 }
