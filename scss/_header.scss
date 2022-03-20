@@ -6,6 +6,16 @@
     @include mixin-margin(0, auto, 0, auto);
     padding: 1rem;
 
+    @include for-phone-only {
+        max-width: 100%;
+        padding: 1.2rem;
+    }
+
+    @include for-tablet-only {
+        max-width: 100%;
+        padding: 2.5rem;
+    }
+
     &__logo {
         max-width: 2.5em;
     }
