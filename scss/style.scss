@@ -168,10 +168,24 @@ $blue-munsell: #02879F;
                 padding: 1rem;
                 border: 1px solid $levander-grey;
                 border-radius: 10px;
+                transition: 400ms all ease;
+
+                &:hover {
+                    transform: translateY(-1.5rem);
+                    cursor: pointer;
+                    border: 1px solid transparent;
+                }
 
                 @include for-phone-only {
                     max-width: 100%;
                     border: none;
+                    transition: none;
+
+                    &:hover {
+                        transform: none;
+                        border: none;
+                        transition: none;
+                    }
 
                     &:not(:last-child) {
                         @include mixin-margin(0, 0, 3rem, 0);
@@ -180,6 +194,12 @@ $blue-munsell: #02879F;
 
                 @include for-tablet-only {
                     padding: 1rem;
+
+                    &:hover {
+                        transform: none;
+                        border: 1px solid $levander-grey;
+                        transition: none;
+                    }
                 }
                 
                 &__icon {

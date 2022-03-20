@@ -190,11 +190,23 @@
   padding: 1rem;
   border: 1px solid #CBCBD7;
   border-radius: 10px;
+  transition: 400ms all ease;
+}
+.main__allcards .smallcards .smallcard:hover {
+  transform: translateY(-1.5rem);
+  cursor: pointer;
+  border: 1px solid transparent;
 }
 @media (max-width: 767.98px) {
   .main__allcards .smallcards .smallcard {
     max-width: 100%;
     border: none;
+    transition: none;
+  }
+  .main__allcards .smallcards .smallcard:hover {
+    transform: none;
+    border: none;
+    transition: none;
   }
   .main__allcards .smallcards .smallcard:not(:last-child) {
     margin: 0 0 3rem 0;
@@ -203,6 +215,11 @@
 @media (min-width: 768px) and (max-width: 1280px) {
   .main__allcards .smallcards .smallcard {
     padding: 1rem;
+  }
+  .main__allcards .smallcards .smallcard:hover {
+    transform: none;
+    border: 1px solid #CBCBD7;
+    transition: none;
   }
 }
 .main__allcards .smallcards .smallcard__icon {
