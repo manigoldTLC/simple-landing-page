@@ -72,6 +72,7 @@ $blue-munsell: #02879F;
 
             @include for-phone-only {
                 width: 100%;
+                text-align: center;
             }
 
             @include for-tablet-only {
@@ -91,7 +92,7 @@ $blue-munsell: #02879F;
             }
         
             &__subtitle {
-                font-size: 1.3em;
+                font-size: 1.2em;
                 font-weight: 400;
                 color: $dark-grey;
                 line-height: 1.5em;
@@ -105,6 +106,10 @@ $blue-munsell: #02879F;
         .buttons {
             @include flexbox(justify-content, flex-start);
             gap: 1.5em;
+
+            @include for-phone-only {
+                @include flexbox(justify-content, center);
+            }
     
             &__primary {
                 color: $raising-white;
@@ -114,6 +119,7 @@ $blue-munsell: #02879F;
                 border: none;
                 font-size: 16px;
                 font-weight: bold;
+                text-decoration: none;
                 transition: 400ms;
     
                 &:hover {
@@ -131,12 +137,31 @@ $blue-munsell: #02879F;
                 font-size: 16px;
                 font-weight: bold;
                 padding: 1em 2em;
+                text-decoration: none;
                 transition: 400ms;
     
                 &:hover {
                     @extend %hover-behavior;
                 }
             }
+        }
+    }
+
+    &__p {
+        @include mixin-margin(10rem, 0, 5rem, 0);
+        line-height: 1.5em;
+        font-size: 1.5em;
+        color: $raising-black;
+
+        &:first-letter {
+            font-weight: bold;
+            font-size: 2em;
+        }
+
+        @include for-phone-only {
+            @include mixin-margin(7rem, 0, 5rem, 0);
+            font-size: 1.3em;
+            text-align: center;
         }
     }
 
@@ -156,7 +181,7 @@ $blue-munsell: #02879F;
         .smallcards {
             width: 100%;
             @include flexbox(justify-content, space-between);
-            @include mixin-margin(7rem, 0, 5rem, 0);
+            @include mixin-margin(0, 0, 5rem, 0);
 
             @include for-phone-only {
                 @include flexbox(flex-direction, column);
@@ -180,6 +205,8 @@ $blue-munsell: #02879F;
                     max-width: 100%;
                     border: none;
                     transition: none;
+                    @include flexbox(align-items, center);
+                    text-align: center;
 
                     &:hover {
                         transform: none;
@@ -251,6 +278,8 @@ $blue-munsell: #02879F;
                 @include for-phone-only {
                     background-color: $standard-white;
                     padding: 0;
+                    @include flexbox(align-items, center);
+                    text-align: center;
 
                     &:not(:last-child) {
                         max-width: 100%;

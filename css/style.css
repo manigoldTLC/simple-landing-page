@@ -95,6 +95,7 @@
 @media (max-width: 767.98px) {
   .main__top-page .texts {
     width: 100%;
+    text-align: center;
   }
 }
 @media (min-width: 768px) and (max-width: 1280px) {
@@ -115,7 +116,7 @@
   }
 }
 .main__top-page .texts__subtitle {
-  font-size: 1.3em;
+  font-size: 1.2em;
   font-weight: 400;
   color: #3D3C3C;
   line-height: 1.5em;
@@ -130,6 +131,12 @@
   justify-content: flex-start;
   gap: 1.5em;
 }
+@media (max-width: 767.98px) {
+  .main__top-page .buttons {
+    display: flex;
+    justify-content: center;
+  }
+}
 .main__top-page .buttons__primary {
   color: #FEFEFE;
   background-color: #00A5AE;
@@ -138,6 +145,7 @@
   border: none;
   font-size: 16px;
   font-weight: bold;
+  text-decoration: none;
   transition: 400ms;
 }
 .main__top-page .buttons__primary:hover {
@@ -153,7 +161,25 @@
   font-size: 16px;
   font-weight: bold;
   padding: 1em 2em;
+  text-decoration: none;
   transition: 400ms;
+}
+.main__p {
+  margin: 10rem 0 5rem 0;
+  line-height: 1.5em;
+  font-size: 1.5em;
+  color: #272626;
+}
+.main__p:first-letter {
+  font-weight: bold;
+  font-size: 2em;
+}
+@media (max-width: 767.98px) {
+  .main__p {
+    margin: 7rem 0 5rem 0;
+    font-size: 1.3em;
+    text-align: center;
+  }
 }
 .main__allcards {
   width: 60%;
@@ -175,7 +201,7 @@
   width: 100%;
   display: flex;
   justify-content: space-between;
-  margin: 7rem 0 5rem 0;
+  margin: 0 0 5rem 0;
 }
 @media (max-width: 767.98px) {
   .main__allcards .smallcards {
@@ -202,6 +228,9 @@
     max-width: 100%;
     border: none;
     transition: none;
+    display: flex;
+    align-items: center;
+    text-align: center;
   }
   .main__allcards .smallcards .smallcard:hover {
     transform: none;
@@ -269,6 +298,9 @@
   .main__allcards .bigcards .bigcard {
     background-color: #FFFFFF;
     padding: 0;
+    display: flex;
+    align-items: center;
+    text-align: center;
   }
   .main__allcards .bigcards .bigcard:not(:last-child) {
     max-width: 100%;
